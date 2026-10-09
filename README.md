@@ -59,7 +59,7 @@ Copy the folder `skills/research-paper-pilot` into your agent's skills directory
 | Claude Code | `~/.claude/skills/` | `.claude/skills/` |
 | Codex | `~/.codex/skills/` | `.agents/skills/` |
 
-Requirements: Python 3.9 or newer, run as `python3` (on Windows, `python` or `py -3`), for the scripts. They use only the standard library. Network access is needed only for online citation verification.
+Requirements: Python 3.9 or newer, run as `python3` on Linux and macOS and as `python` or `py -3` on Windows, where `python3` is usually a Store placeholder that hangs, for the scripts. They use only the standard library. Network access is needed only for online citation verification.
 
 ## A 60-second tour
 

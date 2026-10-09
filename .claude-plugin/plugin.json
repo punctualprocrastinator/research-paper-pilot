@@ -1,6 +1,6 @@
 {
   "name": "research-paper-pilot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Takes a research project (code, results, notes, git history) to a submitted paper in ten modes: understand, hypothesis, litreview, evidence, figures, write, humanize, review, revise, submit.",
   "author": {
     "name": "punctualprocrastinator"

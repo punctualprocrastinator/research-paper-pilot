@@ -5,7 +5,7 @@ license: MIT
 user-invocable: true
 argument-hint: "[understand | hypothesis | litreview | evidence | figures | write | humanize | review | revise | submit] [target]"
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # research-paper-pilot
@@ -45,7 +45,7 @@ These hold in every mode. Each has its reason attached so you can apply it to ca
 7. **I7** Prose edits never add, drop or change a fact, a hedge that carries meaning, or a citation. `scripts/verify_rewrite.py` checks it mechanically (numbers, citations, quotes, negations and hedges; not every change of meaning, such as swapped subjects); a rewrite that fails is discarded.
 8. **I8** The skill edits style and clarity. It never certifies human authorship, never aims at detector evasion, and AI assistance is disclosed according to the venue's policy.
 9. **I9** Blind review stays blind: reviewer agents receive the manuscript, a rubric and the venue name, nothing from project notes. Leaked context turns a reviewer into a rubber stamp.
-10. **I10** Scripts need Python 3.9 or newer and only the standard library. Run them with `python3` (on Windows, `python` or `py -3`), use forward slashes in paths. A failing optional check prints a warning and the work continues; only a hard failure stops it.
+10. **I10** Scripts need Python 3.9 or newer and only the standard library. Run them with `python3` on Linux and macOS and with `python` (or `py -3`) on Windows, where `python3` is usually a Microsoft Store placeholder that opens the Store or hangs instead of running; use forward slashes in paths. A failing optional check prints a warning and the work continues; only a hard failure stops it.
 11. **I11** The paper reads without a glossary. Plain words before coined names, no letter codes in prose, every condition explained by its role where it enters, and the receipts (bars, amendments, script output) kept in the repository rather than in the sentences. A careful paper nobody can follow persuades nobody.
 
 ## Routing
@@ -158,7 +158,7 @@ Templates in `templates/` are copied into the project, never edited in place: `P
 
 ## Scripts: when to run
 
-All are `python3 <skill>/scripts/<name> ...`, where `<skill>` is the absolute path to this skill folder, run from the project directory (reference files and templates write commands the same way); each has `--help`, and most accept `--json`. A relative `--out` resolves against the project directory, so pass an absolute path when outputs must land elsewhere. `check_numbers.py` lists 60 literals by default; use `--all` or `--json` for the full list, and treat a value found in many result files as weak evidence. `transcripts_digest.py` takes `--include-parents` when sessions were started from a parent folder and `--max-prompts 0` for projects older than a month.
+All are `python3 <skill>/scripts/<name> ...` (on Windows substitute `python` for `python3`; the `python3` alias there is a Store placeholder that hangs), where `<skill>` is the absolute path to this skill folder, run from the project directory (reference files and templates write commands the same way); each has `--help`, and most accept `--json`. A relative `--out` resolves against the project directory, so pass an absolute path when outputs must land elsewhere. `check_numbers.py` lists 60 literals by default; use `--all` or `--json` for the full list, and treat a value found in many result files as weak evidence. `transcripts_digest.py` takes `--include-parents` when sessions were started from a parent folder and `--max-prompts 0` for projects older than a month.
 
 | Script | Run when |
 |---|---|
